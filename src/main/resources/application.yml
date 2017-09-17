@@ -1,0 +1,43 @@
+#SPRING DATABASE CONFIGURATION SETTINGS
+#==================================================================================================================================================================================
+#ddl is used if you want to create a db based on the model in your java, 
+#by default it is 'none' for mysql, you can set it to 'none', 'create', 'validate','update', 'create-drop' (similar to embedded db as it is dropped once the application stops running)
+spring:
+  application:
+    name: fambam-api
+  jpa:
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: false
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fambamdb?useSSL=false                # Append "?useSSL=false" to the end of the URL to disable SSL "WARN" log messages 
+    username: springuser
+    password: password
+
+
+
+#LOGGING CONFIGURATION SETTINGS   -    Logging level can be one of TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+#==================================================================================================================================================================================
+debug: false
+logging:
+  file: logs/application.log
+  level:
+    com.fambam.api: DEBUG
+    root: WARN
+    org:
+      hibernate: WARN
+      springframework:
+        web: WARN
+        security: WARN      
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%-5level] - %msg%n"                     #empty this field to stop logging to console
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  
+
+
+#APPLICATON CONFIGURATION SETTINGS
+#==================================================================================================================================================================================
+server:
+  port: ${port} # 0 means random, 8080 is default 
+  

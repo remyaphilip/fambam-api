@@ -1,0 +1,6 @@
+spring:
+  profiles: test
+  
+  
+  
+port: 9999

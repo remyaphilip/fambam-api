@@ -1,0 +1,50 @@
+[
+	{
+		"relationTo":"SISTER",
+		"genderTo":"F",
+		"genderFrom":"M",
+		"relationFrom": "BROTHER"
+	}
+	,{
+		"relationTo":"SISTER",
+		"genderTo":"F",
+		"genderFrom":"F",
+		"relationFrom": "SISTER"
+	}
+	,{
+		"relationTo":"BROTHER",
+		"genderTo":"M",
+		"genderFrom":"F",
+		"relationFrom": "SISTER"
+	}
+	,{
+		"relationTo":"BROTHER",
+		"genderTo":"M",
+		"genderFrom":"M",
+		"relationFrom": "BROTHER"
+	}
+	,{
+		"relationTo":"FATHER",
+		"genderTo":"M",
+		"genderFrom":"M",
+		"relationFrom": "SON"
+	}
+	,{
+		"relationTo":"FATHER",
+		"genderTo":"M",
+		"genderFrom":"F",
+		"relationFrom": "DAUGHTER"
+	}
+	,{
+		"relationTo":"MOTHER",
+		"genderTo":"F",
+		"genderFrom":"M",
+		"relationFrom": "SON"
+	}
+	,{
+		"relationTo":"MOTHER",
+		"genderTo":"F",
+		"genderFrom":"F",
+		"relationFrom": "DAUGHTER"
+	}		
+]
